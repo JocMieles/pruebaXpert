@@ -1,0 +1,6 @@
+[submodule "backXpert"]
+	path = backXpert
+	url = https://github.com/JocMieles/backXpert.git
+[submodule "frontXpert"]
+	path = frontXpert
+	url = https://github.com/JocMieles/frontXpert.git
