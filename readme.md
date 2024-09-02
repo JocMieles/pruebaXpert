@@ -1,5 +1,5 @@
 # Reto BREEDS - XpertGroup
-Este proyecto desarrolla una aplicación frontend utilizando Angular, TypeScript y Bootstrap para gestionar razas de gatos. Los usuarios pueden registrarse, iniciar sesion, seleccionar una raza de gato y visualizar tanto un carrusel de imágenes como una tabla detallada con información relevante sobre la raza seleccionada. La aplicación está diseñada para ser intuitiva, escalable y fácil de usar, brindando una experiencia interactiva a los usuarios.
+Este proyecto desarrolla una aplicación Web en el cual se uso para el Frontend Angular, TypeScript y Bootstrap, y para el Backend se uso Node, Express y Jest, y sirve para gestionar razas de gatos. Los usuarios pueden registrarse, iniciar sesion, seleccionar una raza de gato y visualizar tanto un carrusel de imágenes como una tabla detallada con información relevante sobre la raza seleccionada. La aplicación está diseñada para ser intuitiva, escalable y fácil de usar, brindando una experiencia interactiva a los usuarios.
 
 ## Configuración Inicial
 
