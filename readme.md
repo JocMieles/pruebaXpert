@@ -1,10 +1,10 @@
 # Reto BREEDS - XpertGroup
 
-##C onfiguración Inicial
+## Configuración Inicial
 
 Instrucciones sobre cómo clonar y configurar el proyecto para ejecutarlo localmente:
 ```bash
-git clone **https://github.com/JocMieles/Xpert.git**
+git clone --recurse-submodules https://github.com/JocMieles/pruebaXpert.git
 
 cd Xpert
 ```
@@ -70,18 +70,29 @@ A continuación se presenta una tabla con los endpoints disponibles en la aplica
 
 | Método | Ruta                    | Descripción                              |
 |--------|-------------------------|------------------------------------------|
-| POST    | `/users/login`                | Obtiene una lista de todos los usuarios. |
+| POST    | `/users/login`                | Recibir el token del usuario. |
 | POST   | `/users/register`                | Crea un nuevo usuario.                   |
-| GET    | `/image/:id`            | Obtiene un usuario por su ID.            |
-| PUT    | `/users/:id`            | Actualiza un usuario por su ID.          |
-| DELETE | `/users/:id`            | Elimina un usuario por su ID.            |
-| GET    | `/videos`               | Obtiene una lista de todos los videos.   |
-| POST   | `/videos`               | Crea un nuevo video.                     |
-| GET    | `/videos/:id`           | Obtiene un video por su ID.              |
-| PUT    | `/videos/:id`           | Actualiza un video por su ID. Inhabilitado          |
-| DELETE | `/videos/:id`           | Elimina un video por su ID.              |
-| GET    | `/comments`             | Obtiene una lista de todos los comentarios. |
-| POST   | `/comments`             | Crea un nuevo comentario.               |
-| GET    | `/comments/:id`         | Obtiene un comentario por su ID.        |
-| PUT    | `/comments/:id`         | Actualiza un comentario por su ID.      |
-| DELETE | `/comments/:id`         | Elimina un comentario por su ID.        |
+| GET    | `/breeds`            | Obtiene todas las razas.            |
+| PUT    | `/breeds/search`            | Filtra los nombres de las razas por lo que escribas.          |
+| DELETE | `/breeds/:breed_id`            | Obtiene una raza por su ID.            |
+| GET    | `/imagesbybreedid/:breed_id`               | Obtiene una lista imagenes por el ID de la raza.   |
+
+## Consumo api y ejemplos
+
+Para crear debes enviar en el body: 
+```json
+{
+  "name": "daniel Mieles",
+  "email": "josedmieslses@ejemplo.com",
+  "password": "test123*"
+}
+
+```
+
+Para recibir el token debes enviar en el body:
+```json
+{
+  "email": "josedmieslses@ejemplo.com",
+  "password": "test123*"
+}
+```
