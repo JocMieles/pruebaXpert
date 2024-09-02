@@ -65,6 +65,8 @@ npm i
 npm run start
 
 ```
+El API o Backend queda expuesto en el puerto 3000 - **localhost:3000**
+El Frontend en el puerto 80 - **localhost:4200**
 
 ### BASE DE DATOS
 
@@ -111,11 +113,11 @@ Para recibir el token debes enviar en el body:
 
 # Backend
 Las pruebas unitarias en el backend se centran en validar la lógica del negocio y las respuestas del API. Se utilizan frameworks como Jest para asegurar que los servicios y controladores funcionen correctamente.
-npx jest
+**npx jest**
 
 # Frontend
 Las pruebas unitarias en el frontend son fundamentales para asegurar que los componentes y servicios de Angular funcionen correctamente. Se utiliza Jasmine y Karma para llevar a cabo estas pruebas.
-ng test
+**ng test**
 
 
 ## Propuestas Futuras
