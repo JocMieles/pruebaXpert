@@ -1,12 +1,12 @@
 # Reto BREEDS - XpertGroup
+Este proyecto desarrolla una aplicación frontend utilizando Angular, TypeScript y Bootstrap para gestionar razas de gatos. Los usuarios pueden registrarse, iniciar sesion, seleccionar una raza de gato y visualizar tanto un carrusel de imágenes como una tabla detallada con información relevante sobre la raza seleccionada. La aplicación está diseñada para ser intuitiva, escalable y fácil de usar, brindando una experiencia interactiva a los usuarios.
 
 ## Configuración Inicial
 
 Instrucciones sobre cómo clonar y configurar el proyecto para ejecutarlo localmente:
 ```bash
 git clone --recurse-submodules https://github.com/JocMieles/pruebaXpert.git
-
-cd Xpert
+cd pruebaXpert
 ```
 
 ## Requisitos
@@ -24,9 +24,18 @@ cd Xpert
 ```bash
 
 Iniciar Docker Compose
-
+cd backXpert
+npm i
 npm install
 
+cd .. 
+
+cd fronXpert
+npm ci --legacy-peer-deps
+npm install -g @angular/cli --legacy-peer-deps
+npm install  --legacy-peer-deps
+
+cd ..
 docker-compose up --build
 
 ```
@@ -40,12 +49,13 @@ Entrar en cada carpeta
 
 FRONTEND
 
-cd fronXpert
+cd frontXpert
 npm ci --legacy-peer-deps
 npm install -g @angular/cli --legacy-peer-deps
 npm install  --legacy-peer-deps
 
-npm run start
+npm run start o ng serve
+
 
 BACKEND
 
@@ -96,3 +106,24 @@ Para recibir el token debes enviar en el body:
   "password": "test123*"
 }
 ```
+
+## Pruebas Unitarias
+
+# Backend
+Las pruebas unitarias en el backend se centran en validar la lógica del negocio y las respuestas del API. Se utilizan frameworks como Jest para asegurar que los servicios y controladores funcionen correctamente.
+npx jest
+
+# Frontend
+Las pruebas unitarias en el frontend son fundamentales para asegurar que los componentes y servicios de Angular funcionen correctamente. Se utiliza Jasmine y Karma para llevar a cabo estas pruebas.
+ng test
+
+
+## Propuestas Futuras
+
+Se sugiere como complemento a este desarrollo:
+
+Implementar un mejor sistema de autenticación para proteger rutas específicas.
+Agregar sistema de popups o modales de información para el usuario.
+Optimizar la aplicación para dispositivos móviles (mejorar la responsividad del carrusel y tablas).
+Agregar una funcionalidad de "favoritos" para que los usuarios puedan marcar y guardar razas preferidas.
+Implementar paginación y filtrado avanzado en la tabla de razas.
